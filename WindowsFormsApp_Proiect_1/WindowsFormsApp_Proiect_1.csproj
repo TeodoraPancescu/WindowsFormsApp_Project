@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{97A7058E-8538-4572-B917-41685EF62289}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp_Proiect_1</RootNamespace>
+    <AssemblyName>WindowsFormsApp_Proiect_1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Repository\IRezervareRepository.cs" />
+    <Compile Include="FormRezervare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRezervare.Designer.cs">
+      <DependentUpon>FormRezervare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdaugaPasager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdaugaPasager.Designer.cs">
+      <DependentUpon>FormAdaugaPasager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TipulBiletului.cs" />
+    <Compile Include="Extensions\DataGridViewExtension.cs" />
+    <Compile Include="FormAutentificare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutentificare.Designer.cs">
+      <DependentUpon>FormAutentificare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\FakeDataBase.cs" />
+    <Compile Include="Entities\Pasager.cs" />
+    <Compile Include="Entities\Rezervare.cs" />
+    <Compile Include="Entities\Ruta.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAutovehicule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutovehicule.Designer.cs">
+      <DependentUpon>FormAutovehicule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInformatii.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInformatii.Designer.cs">
+      <DependentUpon>FormInformatii.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPasager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPasager.Designer.cs">
+      <DependentUpon>FormPasager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRuta.Designer.cs">
+      <DependentUpon>FormRuta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IPasagerRepository.cs" />
+    <Compile Include="Repository\IRutaRepository.cs" />
+    <Compile Include="Repository\PasagerRepository.cs" />
+    <Compile Include="FormAdaugaRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdaugaRuta.Designer.cs">
+      <DependentUpon>FormAdaugaRuta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdaugaRezervare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdaugaRezervare.Designer.cs">
+      <DependentUpon>FormAdaugaRezervare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\RezervareRepository.cs" />
+    <Compile Include="Repository\RutaRepository.cs" />
+    <EmbeddedResource Include="FormAdaugaPasager.resx">
+      <DependentUpon>FormAdaugaPasager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutentificare.resx">
+      <DependentUpon>FormAutentificare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutovehicule.resx">
+      <DependentUpon>FormAutovehicule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInformatii.resx">
+      <DependentUpon>FormInformatii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPasager.resx">
+      <DependentUpon>FormPasager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRezervare.resx">
+      <DependentUpon>FormRezervare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRuta.resx">
+      <DependentUpon>FormRuta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="FormAdaugaRuta.resx">
+      <DependentUpon>FormAdaugaRuta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdaugaRezervare.resx">
+      <DependentUpon>FormAdaugaRezervare.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\call-center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\150365l-1000x640-b-7c05d37a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\150365l-1000x640-b-7c05d37a1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\electric1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\electric3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hidrogen1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hidrogen2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\autentificare.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\this-is-a-graphic-reation-of-a-pad-lock-username-and-password-icon-115534595184fsadfncq6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\electric2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ruta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scaune.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
